@@ -1,0 +1,107 @@
+{
+  "Storys": [
+    {
+      "content": "Giới thiệu 1"
+    },
+    {
+      "content": "Giới thiệu 2"
+    },
+    {
+      "content": "Giới thiệu 3"
+    }
+  ],
+  "Interests": [
+    {
+      "src": "/assets/images/js.svg",
+      "content": "Javascript",
+      "text": "Đây là mặt sau của hover"
+    },
+    {
+      "src": "/assets/images/html.svg",
+      "content": "HTML",
+      "text": "Đây là mặt sau của hover"
+    },
+    {
+      "src": "/assets/images/css.svg",
+      "content": "CSS",
+      "text": "Đây là mặt sau của hover"
+    },
+    {
+      "src": "/assets/images/tailwindcss.svg",
+      "content": "Tailwind",
+      "text": "Đây là mặt sau của hover"
+    },
+    {
+      "src": "/assets/images/wp.png",
+      "content": "Wordpress",
+      "text": "Đây là mặt sau của hover"
+    },
+    {
+      "src": "/assets/images/vercel.svg",
+      "content": "Vercel",
+      "text": "Đây là mặt sau của hover"
+    }
+  ],
+  "Skills": [
+    {
+      "left": [
+        { "src": "/assets/images/js.svg", "content": "Javascript" },
+        { "src": "/assets/images/html.svg", "content": "HTML" },
+        { "src": "/assets/images/css.svg", "content": "CSS" },
+        { "src": "/assets/images/tailwindcss.svg", "content": "Tailwind" },
+        { "src": "/assets/images/wp.png", "content": "Wordpress" },
+        { "src": "/assets/images/vercel.svg", "content": "Vercel" }
+      ],
+      "right": [
+        { "content": "Giới thiệu 1" },
+        { "content": "Giới thiệu 2" },
+        { "content": "Giới thiệu 3" },
+        { "content": "Giới thiệu 4" },
+        { "content": "Giới thiệu 5" }
+      ]
+    }
+  ],
+  "Projects": [
+    {
+      "src": "/assets/images/project.jpg",
+      "project": [
+        {
+          "title": "Project",
+          "subTitle": "Mini project",
+          "titleLi": "Chức năng",
+          "li": ["Chức năng 1", "Chức năng 2", "Chức năng 3", "Chức năng 4"]
+        }
+      ]
+    },
+    {
+      "src": "/assets/images/project.jpg",
+      "project": [
+        {
+          "title": "Project",
+          "subTitle": "Mini project",
+          "titleLi": "Chức năng",
+          "li": ["Chức năng 1", "Chức năng 2", "Chức năng 3", "Chức năng 4"]
+        }
+      ]
+    },
+    {
+      "src": "/assets/images/project.jpg",
+      "project": [
+        {
+          "title": "Project",
+          "subTitle": "Mini project",
+          "titleLi": "Chức năng",
+          "li": ["Chức năng 1", "Chức năng 2", "Chức năng 3", "Chức năng 4"]
+        }
+      ]
+    }
+  ],
+  "MiniProject": [
+    { "src": "/assets/images/css.svg", "text": "Demo" },
+    { "src": "/assets/images/css.svg", "text": "Demo" },
+    { "src": "/assets/images/css.svg", "text": "Demo" },
+    { "src": "/assets/images/css.svg", "text": "Demo" },
+    { "src": "/assets/images/css.svg", "text": "Demo" },
+    { "src": "/assets/images/css.svg", "text": "Demo" }
+  ]
+}
