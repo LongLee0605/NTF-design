@@ -4,170 +4,180 @@ import Image from "next/image";
 import React, { useRef } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import emailjs from "emailjs-com";
+import { AiFillRocket } from "react-icons/ai";
+import { FaRocket } from "react-icons/fa";
+import CountUp from "react-countup";
 const HomeTemplate = ({ dataStatic }) => {
-  const form = useRef();
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs
-      .sendForm(
-        "service_eqys4qs",
-        "template_lplncgb",
-        e.target,
-        "SNXVEi0LoV5Ts_gWM"
-      )
-      .then(
-        (result) => {
-          toast.success("Data has been submitted.");
-          setTimeout(() => {
-            result(true);
-          }, 3000);
-          window.location.reload();
-        },
-        (error) => {
-          toast.error("Error! An error occurred. Please try again later");
-          console.log(error.text);
-        }
-      );
-  };
   return (
     <>
       {/* Banner */}
-      <section className="animate-[gradientAnimation_5s_ease_infinite] bg-bbc-gradient-11 bg-[length:180%_180%] pb-0">
-        <div className="relative h-[300px] ">
-          <div className="container">
-            <div className="row">
-              <div className="col-12 lg:col-4">
-                <Title>Xin chào</Title>
-                <b>Đây là test</b>
-                <p>Phần giới thiệu</p>
+      <section className="mt-[100px]">
+        <div className="container">
+          <div className="row items-center">
+            <div className="col-12 lg:col-6">
+              <Title
+                className={`pr-28 text-[67px] font-bold leading-[74px] text-white`}
+              >
+                Discover Digital Art & Collect NFTs
+              </Title>
+              <p className="mt-5 pr-16 text-2xl ">
+                NFT Marketplace UI Created With Anima For Figma. Collect, Buy
+                And Sell Art From More Than 20k NFT Artists.
+              </p>
+              <div className="mt-10 grid grid-cols-3">
+                <a href="">
+                  <div className="flex items-center justify-center rounded-2xl bg-[#A259FF] p-6">
+                    <div className="mr-2">
+                      <FaRocket size={16} className={`text-white`} />
+                    </div>
+                    <p className="font-bold ">Get Stated</p>
+                  </div>
+                </a>
               </div>
-              <div className="col-12 lg:col-8"></div>
+              <div className="mt-10 h-[74px]">
+                <div className="grid grid-cols-3">
+                  <div>
+                    <div className={`text-3xl text-white`}>
+                      <CountUp end={240} className={` font-bold`} />
+                      K+
+                    </div>
+                    <p className="text-2xl ">Total Sale</p>
+                  </div>
+                  <div>
+                    <div className={`text-3xl text-white`}>
+                      <CountUp end={100} className={` font-bold`} />
+                      K+
+                    </div>
+                    <p className="text-2xl ">Auctions</p>
+                  </div>
+                  <div>
+                    <div className={`text-3xl text-white`}>
+                      <CountUp end={240} className={` font-bold`} />
+                      K+
+                    </div>
+                    <p className="text-2xl ">Artists</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-12 lg:col-6">
+              <div className="overflow-hidden rounded-2xl">
+                <div
+                  style={{
+                    width: "540px",
+                    height: "401px",
+                    position: "relative",
+                    alignSelf: "center",
+                  }}
+                >
+                  <Image
+                    src="/assets/images/image-ss1.png"
+                    alt="Logo skill"
+                    layout="fill"
+                  />
+                </div>
+                <div className="bg-[#3B3B3B] px-6 py-5">
+                  <p className="text-2xl font-bold ">Space Walking</p>
+                  <div className="mt-3 flex items-center">
+                    <div
+                      style={{
+                        width: "24px",
+                        height: "24px",
+                        position: "relative",
+                        alignSelf: "center",
+                      }}
+                    >
+                      <Image
+                        src="/assets/images/icon-image.png"
+                        alt="Logo skill"
+                        layout="fill"
+                      />
+                    </div>
+                    <p className="pl-3 ">Animakid</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
-      {/* Test */}
+      {/* section 1 */}
       <section>
+        {" "}
         <div className="container">
-          <div class="cardtest">Magic Card</div>
-        </div>
-      </section>
-      {/* Story */}
-      <section>
-        <div className="container">
-          <Title>Story</Title>
-          <div className="mt-4">
-            {dataStatic?.Storys?.map((item, index) => {
-              return (
-                <div key={index}>
-                  <div
-                    className="mb-5 rounded-2xl px-4 py-6"
-                    style={{ boxShadow: "rgb(181 181 181 / 0.75) 0 16px 40px" }}
-                  >
-                    {item.content}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-      {/* Interests */}
-      <section>
-        <div className="container">
-          <Title>Interests</Title>
-          <div className="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-3">
-            {dataStatic?.Interests?.map((item, index) => {
-              return (
-                <div
-                  key={index}
-                  className="card relative h-60 w-full cursor-pointer overflow-hidden rounded-2xl text-white transition-all duration-700"
-                >
-                  <div className="absolute inset-0 z-20 flex h-full w-full flex-col items-center justify-center bg-gray-900 transition-all delay-200 duration-100 hover:opacity-0">
+          <Title
+            className={`pr-28 text-[67px] font-bold leading-[74px] text-white`}
+          >
+            Trending Collection
+          </Title>
+          <p className="mt-3 text-2xl">
+            Checkout our weekly updated trending collection.
+          </p>
+          <div className="my-[60px]">
+            <div className="grid grid-cols-3 gap-8">
+              {dataStatic?.images?.map((item, index) => {
+                return (
+                  <div key={index}>
                     <div
+                      className="rounded-2xl"
                       style={{
-                        width: "84px",
-                        height: "84px",
+                        width: "348px",
+                        height: "330px",
                         position: "relative",
                         alignSelf: "center",
                       }}
                     >
                       <Image src={item.src} alt="Logo skill" layout="fill" />
                     </div>
-                    <div className="mt-4 text-white">{item.content}</div>
-                  </div>
-                  <div className="card-back absolute inset-0 z-10 flex h-full w-full items-center justify-center bg-black transition-all">
-                    {item.text}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-      {/* Skill */}
-      <section>
-        <div className="container">
-          <Title>Skill</Title>
-          <div className="row mt-6">
-            <div className="col-12 lg:col-6">
-              <div className="row">
-                {dataStatic?.Skills?.map((itemSkill, indexSkill) => {
-                  return (
-                    <div
-                      key={indexSkill}
-                      className="mb-6 grid grid-cols-2 gap-4  lg:mb-0 lg:grid-cols-3"
-                    >
-                      {itemSkill?.left?.map((itemLeft, indexLeft) => {
+                    <div className="mt-4 grid grid-cols-3 gap-4">
+                      {item?.mini?.map((itemMini, indexMini) => {
                         return (
                           <div
-                            key={indexLeft}
-                            className="flex scale-100 flex-col rounded-2xl border-2 p-6 duration-500 hover:scale-110"
+                            key={indexMini}
+                            className="rounded-2xl"
+                            style={{
+                              width: "103px",
+                              height: "100px",
+                              position: "relative",
+                              alignSelf: "center",
+                            }}
                           >
-                            <div
-                              style={{
-                                width: "84px",
-                                height: "84px",
-                                position: "relative",
-                                alignSelf: "center",
-                              }}
-                            >
-                              <Image
-                                src={itemLeft.src}
-                                alt="Logo skill"
-                                layout="fill"
-                              />
-                            </div>
-                            <div className="mt-2 text-center">
-                              <p className="text-xl font-semibold">
-                                {itemLeft.content}
-                              </p>
+                            {" "}
+                            <Image
+                              src={itemMini.src}
+                              alt="Logo skill"
+                              layout="fill"
+                            />
+                          </div>
+                        );
+                      })}
+                    </div>
+                    <div className="mt-4">
+                      {item?.content?.map((itemC, indexC) => {
+                        return (
+                          <div key={indexC}>
+                            <p className="text-2xl font-bold ">{itemC.title}</p>
+                            <div className="mt-3 flex items-center">
+                              <div
+                                style={{
+                                  width: "24px",
+                                  height: "24px",
+                                  position: "relative",
+                                  alignSelf: "center",
+                                }}
+                              >
+                                <Image
+                                  src={itemC.icon}
+                                  alt="Logo skill"
+                                  layout="fill"
+                                />
+                              </div>
+                              <p className="pl-3 ">{itemC.text}</p>
                             </div>
                           </div>
                         );
                       })}
                     </div>
-                  );
-                })}
-              </div>
-            </div>
-            <div className="col-12 lg:col-6">
-              {dataStatic?.Skills?.map((itemSkill, indexSkill) => {
-                return (
-                  <div key={indexSkill}>
-                    {itemSkill?.right?.map((itemRight, indexRight) => {
-                      return (
-                        <div
-                          key={indexRight}
-                          className="mt-2 rounded-2xl border-2 p-4 first:mt-0"
-                        >
-                          <p className="text-xl font-semibold">
-                            {itemRight.content}
-                          </p>
-                        </div>
-                      );
-                    })}
                   </div>
                 );
               })}
@@ -175,172 +185,106 @@ const HomeTemplate = ({ dataStatic }) => {
           </div>
         </div>
       </section>
-      {/* Project */}
+      {/* section 2 */}
       <section>
         <div className="container">
-          <Title>Project</Title>
-          <div className="mt-6">
-            {dataStatic?.Projects?.map((item, index) => {
-              return (
-                <div
-                  key={index}
-                  className="mb-5 rounded-2xl bg-slate-300 p-10 last:mb-0"
-                >
-                  <div className="border-2">
-                    <div className="row">
-                      <div className="col-12 p-10 lg:col-6">
-                        {item?.project?.map((itemLeft, indexLeft) => {
-                          return (
-                            <div key={indexLeft}>
-                              <Title>{itemLeft.title}</Title>
-                              <div className="ml-2">{itemLeft.subTitle}</div>
-                              <ul className="ml-5">
-                                <div>{itemLeft.titleLi}</div>
-                                {itemLeft?.li?.map((itemLi, indexLi) => {
-                                  return (
-                                    <li
-                                      key={indexLi}
-                                      className="list-inside list-disc"
-                                    >
-                                      {itemLi}
-                                    </li>
-                                  );
-                                })}
-                              </ul>
-                            </div>
-                          );
-                        })}
-                      </div>
-                      <div className="col-12 flex justify-center lg:col-6 ">
-                        <div
-                          style={{
-                            width: "230px",
-                            height: "270px",
-                            position: "relative",
-                            alignSelf: "center",
-                          }}
-                        >
-                          <Image
-                            src={item.src}
-                            alt="Logo skill"
-                            layout="fill"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="row mt-5 px-6 text-center">
-                      <a
-                        href=""
-                        className="col-6 rounded-xl border-2 bg-white px-6 py-3 font-semibold text-black hover:bg-black hover:text-white lg:col-3"
-                      >
-                        Xem Demo
-                      </a>{" "}
-                      <a
-                        href=""
-                        className="col-6 rounded-xl border-2 bg-white px-6 py-3 font-semibold text-black hover:bg-black hover:text-white lg:col-3"
-                      >
-                        Xem Source Code
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-      {/* Mini Project */}
-      <section>
-        <div className="container">
-          <Title>Mini Project</Title>
-          <div className="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-3">
-            {dataStatic?.MiniProject?.map((item, index) => {
-              return (
-                <div
-                  key={index}
-                  class="group flex items-center justify-center rounded-2xl border "
-                >
-                  <div class="relative aspect-video cursor-pointer ">
-                    <div class=" pt-30 absolute inset-0 z-50 flex cursor-pointer items-center justify-center rounded-2xl bg-slate-600  bg-opacity-50 to-transparent opacity-0 transition duration-300 group-hover:opacity-100">
-                      <div class="translate-y-4 space-y-3 rounded-2xl p-4 pb-10 text-xl transition duration-300  group-hover:translate-y-0">
-                        <a
-                          href=""
-                          className="rounded-xl bg-white px-6 py-3 font-semibold text-black hover:bg-black hover:text-white"
-                        >
-                          {item.text}
-                        </a>
-                      </div>
-                    </div>
-                    <div
-                      style={{
-                        width: "355px",
-                        height: "200px",
-                        position: "relative",
-                        alignSelf: "center",
-                      }}
-                    >
-                      <Image src={item.src} alt="Logo skill" layout="fill" />
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-      {/* Contact */}
-      <section>
-        <div className="container">
-          <Title>Contact</Title>
-          <div className="mt-6">
-            <div className="rounded-2xl border p-10">
-              <form className="contact-form" ref={form} onSubmit={sendEmail}>
-                <div className="row mb-6">
-                  <div className="col-12 lg:col-6">
-                    <div className="mb-2 text-lg font-semibold">Name</div>
-                    <input
-                      type="text"
-                      name="user_name"
-                      className="w-full rounded-xl py-6 px-3"
-                      placeholder="Your name"
-                      pattern="[A-Za-z]{1,32}"
-                    />
-                  </div>
-                  <div className="col-12 lg:col-6">
-                    <div className="mb-2 text-lg font-semibold">Email</div>
-                    <input
-                      type="email"
-                      name="user_email"
-                      className="w-full rounded-xl py-6 px-3"
-                      placeholder="Your email"
-                      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-                    />
-                  </div>
-                </div>
-                <div className="mb-2 text-lg font-semibold">Subject</div>
-                <input
-                  type="text"
-                  name="user_subject"
-                  className="mb-6 w-full rounded-xl py-6 px-3"
-                  placeholder="Subject"
-                  pattern="[A-Za-z]{1,32}"
-                />
-                <div className="mb-2 text-lg font-semibold">Message</div>
-                <textarea
-                  name="message"
-                  className="w-full rounded-xl py-6 px-3 "
-                  placeholder="Message"
-                />
-                <div className="mt-4 flex justify-center">
-                  <input
-                    type="submit"
-                    value="Send"
-                    className="cursor-pointer rounded-2xl border px-10 py-3 text-xl font-semibold text-black hover:bg-black hover:text-white"
-                  />
-                  <Toaster />
-                </div>
-              </form>
+          <div className="row">
+            <div className="col-9">
+              <Title
+                className={`pr-28 text-[67px] font-bold leading-[74px] text-white`}
+              >
+                Top Creators
+              </Title>
+              <p className="mt-3 text-2xl">
+                Checkout Top Rated Creators on the NFT Marketplace
+              </p>
             </div>
+            <div className="col-3 flex items-end">
+              <a href="" className="">
+                <div className="rounded-3xl border border-[#A259FF]">
+                  <div className="flex px-[50px] py-5">
+                    <div>
+                      <FaRocket size={20} className="mr-3 text-[#A259FF]" />
+                    </div>
+                    <p className="font-bold">View Rankings</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div className="mt-[60px] grid grid-cols-4 gap-8">
+            {dataStatic?.Tops?.map((item, index) => {
+              return (
+                <div
+                  key={index}
+                  className="relative flex flex-col items-center rounded-3xl bg-[#3B3B3B] p-5"
+                >
+                  <div className="absolute left-5 top-4 rounded-full bg-[#2B2B2B] px-3 py-1 text-[#858584]">
+                    {item.num}
+                  </div>
+                  <div
+                    className="rounded-2xl"
+                    style={{
+                      width: "120px",
+                      height: "120px",
+                      position: "relative",
+                      alignSelf: "center",
+                    }}
+                  >
+                    <Image src={item.src} alt="Logo skill" layout="fill" />
+                  </div>
+                  <div>
+                    <p className="text-2xl font-bold">{item.name}</p>
+                  </div>
+                  <div>
+                    <p className="text-[#858584]">
+                      Total Sales:{" "}
+                      <span className="text-white">{item.total}</span>
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+      {/* section 3 */}
+      <section>
+        <div className="container">
+          <Title
+            className={`pr-28 text-[67px] font-bold leading-[74px] text-white`}
+          >
+            Browse Categories
+          </Title>
+          <div className="mt-[60px] grid grid-cols-4 gap-8">
+            {dataStatic?.Browser?.map((item, index) => {
+              return (
+                <div key={index} className="group overflow-hidden rounded-2xl">
+                  {/* hover */}
+                  <div
+                    style={{
+                      width: "253px",
+                      height: "240px",
+                      position: "relative",
+                      alignSelf: "center",
+                    }}
+                  >
+                    <Image src={item.src} alt="Logo skill" layout="fill" />
+                    <div className="absolute inset-0 w-full blur-sm">
+                      <Image
+                        src={item.srcH}
+                        alt="Logo skill"
+                        width={80}
+                        height={80}
+                      />
+                    </div>
+                  </div>
+                  <div className="bg-[#3B3B3B] px-8 py-5">
+                    <p className="text-2xl font-bold">{item.text}</p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

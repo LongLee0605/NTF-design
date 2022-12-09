@@ -32,33 +32,12 @@ const Header = () => {
   const [screen, setScreen] = useState(null);
   useResizeScreenModifile(setScreen);
   const ref = useRef();
-  const [navActive, setNavActive] = useState(false);
   // nav
   const [showSidebar, setShowSidebar] = useState(false);
   // Close nav when click over
   useOutsideClick(ref, () => {
     if (showSidebar) setShowSidebar(false);
   });
-
-  const router = useRouter();
-
-  const listenScrollEvent = () => {
-    let isActive = window.scrollY > 60;
-    let navElement = document.getElementById("nav-desktop");
-    setNavActive(isActive);
-    if (isActive) {
-      navElement.classList.add("fixed", "!top-0");
-    } else {
-      navElement.classList.remove("fixed", "!top-0");
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", listenScrollEvent);
-    return () => {
-      window.removeEventListener("scroll", listenScrollEvent);
-    };
-  }, []);
 
   useEffect(() => {
     setShowSidebar(false);
@@ -70,7 +49,7 @@ const Header = () => {
         <div
           className={`fixed top-0 z-50 w-full bg-[#2B2B2B]`}
           style={{
-            boxShadow: "rgb(181 181 181 / 0.75) 0 16px 40px",
+            boxShadow: "rgb(181 181 181 / 0.75) 0 4px 10px",
             backdropFilter: "blur(10px)",
           }}
         >

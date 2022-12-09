@@ -18,7 +18,7 @@ a {
   box-sizing: border-box;
 }
 p {
-  color: #333;
+  color: #fff;
 }
 @media (prefers-color-scheme: dark) {
   html {
@@ -31,7 +31,7 @@ p {
   }
 }
 section {
-  @apply bg-[#F7FAFD] py-10 lg:py-20;
+  @apply bg-[#2B2B2B] py-10 lg:py-20;
 }
 .card:hover {
   transform: rotateX(180deg);

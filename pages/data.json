@@ -1,107 +1,158 @@
 {
-  "Storys": [
+  "images": [
     {
-      "content": "Giới thiệu 1"
-    },
-    {
-      "content": "Giới thiệu 2"
-    },
-    {
-      "content": "Giới thiệu 3"
-    }
-  ],
-  "Interests": [
-    {
-      "src": "/assets/images/js.svg",
-      "content": "Javascript",
-      "text": "Đây là mặt sau của hover"
-    },
-    {
-      "src": "/assets/images/html.svg",
-      "content": "HTML",
-      "text": "Đây là mặt sau của hover"
-    },
-    {
-      "src": "/assets/images/css.svg",
-      "content": "CSS",
-      "text": "Đây là mặt sau của hover"
-    },
-    {
-      "src": "/assets/images/tailwindcss.svg",
-      "content": "Tailwind",
-      "text": "Đây là mặt sau của hover"
-    },
-    {
-      "src": "/assets/images/wp.png",
-      "content": "Wordpress",
-      "text": "Đây là mặt sau của hover"
-    },
-    {
-      "src": "/assets/images/vercel.svg",
-      "content": "Vercel",
-      "text": "Đây là mặt sau của hover"
-    }
-  ],
-  "Skills": [
-    {
-      "left": [
-        { "src": "/assets/images/js.svg", "content": "Javascript" },
-        { "src": "/assets/images/html.svg", "content": "HTML" },
-        { "src": "/assets/images/css.svg", "content": "CSS" },
-        { "src": "/assets/images/tailwindcss.svg", "content": "Tailwind" },
-        { "src": "/assets/images/wp.png", "content": "Wordpress" },
-        { "src": "/assets/images/vercel.svg", "content": "Vercel" }
+      "src": "/assets/images/b-1.png",
+      "mini": [
+        { "src": "/assets/images/b-m-1.png" },
+        { "src": "/assets/images/b-m-2.png" },
+        { "src": "/assets/images/num.png" }
       ],
-      "right": [
-        { "content": "Giới thiệu 1" },
-        { "content": "Giới thiệu 2" },
-        { "content": "Giới thiệu 3" },
-        { "content": "Giới thiệu 4" },
-        { "content": "Giới thiệu 5" }
-      ]
-    }
-  ],
-  "Projects": [
-    {
-      "src": "/assets/images/project.jpg",
-      "project": [
+      "content": [
         {
-          "title": "Project",
-          "subTitle": "Mini project",
-          "titleLi": "Chức năng",
-          "li": ["Chức năng 1", "Chức năng 2", "Chức năng 3", "Chức năng 4"]
+          "title": "DSGN Animals",
+          "icon": "/assets/images/i-1.png",
+          "text": "MrFox"
         }
       ]
     },
     {
-      "src": "/assets/images/project.jpg",
-      "project": [
+      "src": "/assets/images/b-2.png",
+      "mini": [
+        { "src": "/assets/images/b-m-3.png" },
+        { "src": "/assets/images/b-m-4.png" },
+        { "src": "/assets/images/num.png" }
+      ],
+      "content": [
         {
-          "title": "Project",
-          "subTitle": "Mini project",
-          "titleLi": "Chức năng",
-          "li": ["Chức năng 1", "Chức năng 2", "Chức năng 3", "Chức năng 4"]
+          "title": "Magic Mushrooms",
+          "icon": "/assets/images/i-2.png",
+          "text": "Shroomie"
         }
       ]
     },
     {
-      "src": "/assets/images/project.jpg",
-      "project": [
+      "src": "/assets/images/b-3.png",
+      "mini": [
+        { "src": "/assets/images/b-m-5.png" },
+        { "src": "/assets/images/b-m-6.png" },
+        { "src": "/assets/images/num.png" }
+      ],
+      "content": [
         {
-          "title": "Project",
-          "subTitle": "Mini project",
-          "titleLi": "Chức năng",
-          "li": ["Chức năng 1", "Chức năng 2", "Chức năng 3", "Chức năng 4"]
+          "title": "Disco Machines",
+          "icon": "/assets/images/i-3.png",
+          "text": "BeKind2Robots"
         }
       ]
     }
   ],
-  "MiniProject": [
-    { "src": "/assets/images/css.svg", "text": "Demo" },
-    { "src": "/assets/images/css.svg", "text": "Demo" },
-    { "src": "/assets/images/css.svg", "text": "Demo" },
-    { "src": "/assets/images/css.svg", "text": "Demo" },
-    { "src": "/assets/images/css.svg", "text": "Demo" },
-    { "src": "/assets/images/css.svg", "text": "Demo" }
+  "Tops": [
+    {
+      "num": "1",
+      "src": "/assets/images/c-1.png",
+      "name": "Keepitreal",
+      "total": "34.53 ETH"
+    },
+    {
+      "num": "2",
+      "src": "/assets/images/c-2.png",
+      "name": "DigiLab",
+      "total": "34.53 ETH"
+    },
+    {
+      "num": "3",
+      "src": "/assets/images/c-3.png",
+      "name": "GravityOne",
+      "total": "34.53 ETH"
+    },
+    {
+      "num": "4",
+      "src": "/assets/images/c-4.png",
+      "name": "Juanie",
+      "total": "34.53 ETH"
+    },
+    {
+      "num": "5",
+      "src": "/assets/images/c-5.png",
+      "name": "BlueWhale",
+      "total": "34.53 ETH"
+    },
+    {
+      "num": "6",
+      "src": "/assets/images/c-6.png",
+      "name": "Mr fox",
+      "total": "34.53 ETH"
+    },
+    {
+      "num": "7",
+      "src": "/assets/images/c-7.png",
+      "name": "Shroomie",
+      "total": "34.53 ETH"
+    },
+    {
+      "num": "8",
+      "src": "/assets/images/c-8.png",
+      "name": "Robotica",
+      "total": "34.53 ETH"
+    },
+    {
+      "num": "9",
+      "src": "/assets/images/c-9.png",
+      "name": "RustyRobot",
+      "total": "34.53 ETH"
+    },
+    {
+      "num": "10",
+      "src": "/assets/images/c-10.png",
+      "name": "Animakid",
+      "total": "34.53 ETH"
+    },
+    {
+      "num": "11",
+      "src": "/assets/images/c-11.png",
+      "name": "Dotgu",
+      "total": "34.53 ETH"
+    },
+    {
+      "num": "12",
+      "src": "/assets/images/c-12.png",
+      "name": "Ghiblier",
+      "total": "34.53 ETH"
+    }
+  ],
+  "Browser": [
+    {
+      "src": "/assets/images/br-1.png",
+      "srcH": "/assets/images/PaintBrush.png",
+      "text": "Art"
+    },
+    {
+      "src": "/assets/images/br-2.png",
+      "text": "Collectibles"
+    },
+    {
+      "src": "/assets/images/br-3.png",
+      "text": "Music"
+    },
+    {
+      "src": "/assets/images/br-4.png",
+      "text": "Photography"
+    },
+    {
+      "src": "/assets/images/br-5.png",
+      "text": "Video"
+    },
+    {
+      "src": "/assets/images/br-6.png",
+      "text": "Utility"
+    },
+    {
+      "src": "/assets/images/br-7.png",
+      "text": "Sport"
+    },
+    {
+      "src": "/assets/images/br-8.png",
+      "text": "Virtual Worlds"
+    }
   ]
 }
