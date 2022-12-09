@@ -261,21 +261,21 @@ const HomeTemplate = ({ dataStatic }) => {
               return (
                 <div key={index} className="group overflow-hidden rounded-2xl">
                   {/* hover */}
-                  <div
-                    style={{
-                      width: "253px",
-                      height: "240px",
-                      position: "relative",
-                      alignSelf: "center",
-                    }}
-                  >
-                    <Image src={item.src} alt="Logo skill" layout="fill" />
-                    <div className="absolute inset-0 w-full blur-sm">
+                  <div className="group relative">
+                    <Image
+                      src={item.src}
+                      alt="Logo skill"
+                      width={253}
+                      height={240}
+                      className="blur-sm duration-500 group-hover:blur-0"
+                    />
+                    <div className="absolute inset-0 duration-500 group-hover:opacity-0">
                       <Image
+                        className="mx-auto pt-20"
                         src={item.srcH}
                         alt="Logo skill"
-                        width={80}
-                        height={80}
+                        width={100}
+                        height={100}
                       />
                     </div>
                   </div>

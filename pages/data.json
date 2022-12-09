@@ -128,30 +128,37 @@
     },
     {
       "src": "/assets/images/br-2.png",
+      "srcH": "/assets/images/Swatches.png",
       "text": "Collectibles"
     },
     {
       "src": "/assets/images/br-3.png",
+      "srcH": "/assets/images/MusicNotes.png",
       "text": "Music"
     },
     {
       "src": "/assets/images/br-4.png",
+      "srcH": "/assets/images/Camera.png",
       "text": "Photography"
     },
     {
       "src": "/assets/images/br-5.png",
+      "srcH": "/assets/images/VideoCamera.png",
       "text": "Video"
     },
     {
       "src": "/assets/images/br-6.png",
+      "srcH": "/assets/images/MagicWand.png",
       "text": "Utility"
     },
     {
       "src": "/assets/images/br-7.png",
+      "srcH": "/assets/images/Basketball.png",
       "text": "Sport"
     },
     {
       "src": "/assets/images/br-8.png",
+      "srcH": "/assets/images/Planet.png",
       "text": "Virtual Worlds"
     }
   ]
