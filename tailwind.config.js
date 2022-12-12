@@ -116,10 +116,12 @@ module.exports = {
       },
     },
     backgroundImage: {
+      "bbc-gradient":
+        "linear-gradient(0deg, rgba(162, 89, 255, 1) 0%, rgba(162, 89, 255, 0) 100%);",
       "bbc-gradient-liner":
         "linear-gradient(90deg, #007EFF -2.06%, #003E7E -2.05%, #007EFF 97.16%);",
       "bbc-gradient-liner1":
-        "linear-gradient(82.86deg, #000577 -19.93%, #00A3FF 75.2%), linear-gradient(89.75deg, #BA3838 -4.9%, #FF0000 97.56%);",
+        "linear-gradient(0deg, #000577 -19.93%, #00A3FF 75.2%), linear-gradient(89.75deg, #BA3838 -4.9%, #FF0000 97.56%);",
       "bbc-gradient-liner2":
         "linear-gradient(90deg, #00458C -2.06%, #003E7E -2.05%, #007EFF 97.16%);",
       "bbc-gradient-liner3":

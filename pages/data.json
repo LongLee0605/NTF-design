@@ -161,5 +161,48 @@
       "srcH": "/assets/images/Planet.png",
       "text": "Virtual Worlds"
     }
+  ],
+  "More": [
+    {
+      "src": "/assets/images/more-1.png",
+      "title": "NFT Name",
+      "subTitle": "NFT Artist",
+      "subSrc": "/assets/images/subSrcIcon.png",
+      "price": "1.63 ETH",
+      "bid": "0.33 wETH"
+    },
+    {
+      "src": "/assets/images/more-2.png",
+      "title": "NFT Name",
+      "subTitle": "NFT Artist",
+      "subSrc": "/assets/images/subSrcIcon.png",
+      "price": "1.63 ETH",
+      "bid": "0.33 wETH"
+    },
+    {
+      "src": "/assets/images/more-3.png",
+      "title": "NFT Name",
+      "subTitle": "NFT Artist",
+      "subSrc": "/assets/images/subSrcIcon.png",
+      "price": "1.63 ETH",
+      "bid": "0.33 wETH"
+    }
+  ],
+  "How": [
+    {
+      "src": "/assets/images/Icon-1.png",
+      "title": "Setup Your wallet",
+      "text": "Set up your wallet of choice. Connect it to the Animarket by clicking the wallet icon in the top right corner."
+    },
+    {
+      "src": "/assets/images/Icon-2.png",
+      "title": "Create Collection",
+      "text": "Upload your work and setup your collection. Add a description, social links and floor price."
+    },
+    {
+      "src": "/assets/images/Icon-3.png",
+      "title": "Start Earning",
+      "text": "Choose between auctions and fixed-price listings. Start earning by selling your NFTs or trading others."
+    }
   ]
 }

@@ -4,9 +4,10 @@ import Image from "next/image";
 import React, { useRef } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import emailjs from "emailjs-com";
-import { AiFillRocket } from "react-icons/ai";
+import { AiFillRocket, AiTwotoneEye } from "react-icons/ai";
 import { FaRocket } from "react-icons/fa";
 import CountUp from "react-countup";
+import AiOutlineMail from "components/atoms/Icon/ai/AiOutlineMail";
 const HomeTemplate = ({ dataStatic }) => {
   return (
     <>
@@ -15,11 +16,7 @@ const HomeTemplate = ({ dataStatic }) => {
         <div className="container">
           <div className="row items-center">
             <div className="col-12 lg:col-6">
-              <Title
-                className={`pr-28 text-[67px] font-bold leading-[74px] text-white`}
-              >
-                Discover Digital Art & Collect NFTs
-              </Title>
+              <Title as="h1">Discover Digital Art & Collect NFTs</Title>
               <p className="mt-5 pr-16 text-2xl ">
                 NFT Marketplace UI Created With Anima For Figma. Collect, Buy
                 And Sell Art From More Than 20k NFT Artists.
@@ -62,40 +59,12 @@ const HomeTemplate = ({ dataStatic }) => {
             </div>
             <div className="col-12 lg:col-6">
               <div className="overflow-hidden rounded-2xl">
-                <div
-                  style={{
-                    width: "540px",
-                    height: "401px",
-                    position: "relative",
-                    alignSelf: "center",
-                  }}
-                >
-                  <Image
-                    src="/assets/images/image-ss1.png"
-                    alt="Logo skill"
-                    layout="fill"
-                  />
-                </div>
-                <div className="bg-[#3B3B3B] px-6 py-5">
-                  <p className="text-2xl font-bold ">Space Walking</p>
-                  <div className="mt-3 flex items-center">
-                    <div
-                      style={{
-                        width: "24px",
-                        height: "24px",
-                        position: "relative",
-                        alignSelf: "center",
-                      }}
-                    >
-                      <Image
-                        src="/assets/images/icon-image.png"
-                        alt="Logo skill"
-                        layout="fill"
-                      />
-                    </div>
-                    <p className="pl-3 ">Animakid</p>
-                  </div>
-                </div>
+                <Image
+                  src="/assets/images/banner.gif"
+                  alt="Logo skill"
+                  width={610}
+                  height={610}
+                />
               </div>
             </div>
           </div>
@@ -105,11 +74,7 @@ const HomeTemplate = ({ dataStatic }) => {
       <section>
         {" "}
         <div className="container">
-          <Title
-            className={`pr-28 text-[67px] font-bold leading-[74px] text-white`}
-          >
-            Trending Collection
-          </Title>
+          <Title as="h2">Trending Collection</Title>
           <p className="mt-3 text-2xl">
             Checkout our weekly updated trending collection.
           </p>
@@ -190,11 +155,7 @@ const HomeTemplate = ({ dataStatic }) => {
         <div className="container">
           <div className="row">
             <div className="col-9">
-              <Title
-                className={`pr-28 text-[67px] font-bold leading-[74px] text-white`}
-              >
-                Top Creators
-              </Title>
+              <Title as="h2">Top Creators</Title>
               <p className="mt-3 text-2xl">
                 Checkout Top Rated Creators on the NFT Marketplace
               </p>
@@ -251,11 +212,7 @@ const HomeTemplate = ({ dataStatic }) => {
       {/* section 3 */}
       <section>
         <div className="container">
-          <Title
-            className={`pr-28 text-[67px] font-bold leading-[74px] text-white`}
-          >
-            Browse Categories
-          </Title>
+          <Title as="h2">Browse Categories</Title>
           <div className="mt-[60px] grid grid-cols-4 gap-8">
             {dataStatic?.Browser?.map((item, index) => {
               return (
@@ -285,6 +242,196 @@ const HomeTemplate = ({ dataStatic }) => {
                 </div>
               );
             })}
+          </div>
+        </div>
+      </section>
+      {/* section 4 */}
+      <section>
+        <div className="container">
+          <div className="row">
+            <div className="col-9">
+              <Title as="h2">Discover More NFTs</Title>
+              <p className="mt-3 text-2xl">Explore new trending NFTs</p>
+            </div>
+            <div className="col-3 flex items-end">
+              <a href="" className="">
+                <div className="rounded-3xl border border-[#A259FF]">
+                  <div className="flex items-center px-[50px] py-5">
+                    <div>
+                      <AiTwotoneEye size={20} className="mr-3 text-[#A259FF]" />
+                    </div>
+                    <p className="font-bold">See All</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div className="mt-15 grid grid-cols-3 gap-8">
+            {dataStatic?.More?.map((item, index) => {
+              return (
+                <div key={index} className="group overflow-hidden rounded-2xl">
+                  {/* hover */}
+                  <div className="group">
+                    <Image
+                      src={item.src}
+                      alt="Logo skill"
+                      width={349}
+                      height={296}
+                    />
+                  </div>
+                  <div className="bg-[#3B3B3B] px-8 py-5">
+                    <p className="mb-2 text-2xl font-bold">{item.title}</p>
+                    <div className="mb-7 flex items-center">
+                      <div className="mr-3">
+                        {" "}
+                        <Image
+                          src={item.subSrc}
+                          alt="Logo skill"
+                          width={24}
+                          height={24}
+                        />
+                      </div>
+                      <div>
+                        <p>{item.subTitle}</p>
+                      </div>
+                    </div>
+                    <div className="row">
+                      <div className="col-6">
+                        <p className="text-xs text-[#858584]">Price</p>
+                        <div className="text-white">{item.price}</div>
+                      </div>
+                      <div className="col-6 text-right">
+                        <p className="text-xs text-[#858584]">Highest Bid</p>
+                        <div className="text-white">{item.bid}</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+      {/* section 5 */}
+      <section className="relative py-0">
+        <div className=" h-[675px] bg-[url('/assets/images/banner-full.png')] bg-cover bg-center">
+          <div class="absolute inset-0 bg-bbc-gradient "></div>
+        </div>
+        <div className="container absolute inset-0 pt-[360px] pb-15">
+          <div className=" mb-8 flex w-[160px] items-center rounded-2xl bg-[#3B3B3B] px-5 py-3">
+            <div className="mr-3">
+              <Image
+                src={`/assets/images/i-2.png`}
+                alt="Logo skill"
+                width={24}
+                height={24}
+              />
+            </div>
+            <p>Shroomie</p>
+            <p></p>
+          </div>
+          <div className="row">
+            <div className="col-6">
+              <Title as="h2">Discover More NFTs</Title>
+              <a href="">
+                <div className="mt-8 w-[200px] rounded-3xl bg-white">
+                  <div className="flex items-center px-[50px] py-5">
+                    <div>
+                      <AiTwotoneEye size={20} className="mr-3 text-[#A259FF]" />
+                    </div>
+                    <p className="font-bold text-black">See NFT</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div className="col-6 flex justify-end">
+              <div className="w-[300px] rounded-xl bg-[#3B3B3B] bg-opacity-50 p-8">
+                <p>Auction ends in:</p>
+                <div className="flex  justify-between text-white">
+                  <div className="">
+                    <p className="text-[42px] font-bold">59</p>
+                    <p>Hours</p>
+                  </div>
+                  <div className="pt-2 text-4xl">:</div>
+                  <div className="">
+                    <p className="text-[42px] font-bold">59</p>
+                    <p>Minutes</p>
+                  </div>
+                  <div className="pt-2 text-4xl">:</div>
+                  <div className="">
+                    <p className="text-[42px] font-bold">59</p>
+                    <p>Seconds</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* section 6 */}
+      <section>
+        <div className="container">
+          <Title as="h2">How it works</Title>
+          <p className="mt-3 text-2xl">Find out how to get started</p>
+          <div className="mt-12 grid grid-cols-3 gap-8">
+            {dataStatic?.How?.map((item, index) => {
+              return (
+                <div
+                  key={index}
+                  className="item-center flex flex-col overflow-hidden rounded-2xl bg-[#3B3B3B] p-8"
+                >
+                  <div className="mb-5 flex justify-center">
+                    <Image
+                      src={item.src}
+                      alt="Logo skill"
+                      width={220}
+                      height={220}
+                    />
+                  </div>
+                  <div className="text-center">
+                    <p className="mb-3 text-2xl font-bold">{item.title}</p>
+                    <p className="px-5">{item.text}</p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+      {/* section 7 */}
+      <section>
+        <div className="container rounded-2xl bg-[#3B3B3B] p-15">
+          <div className="row items-center">
+            <div className="col-12 lg:col-6">
+              <div className="">
+                <Image
+                  src={`/assets/images/Photo.png`}
+                  alt="Logo skill"
+                  width={425}
+                  height={310}
+                />
+              </div>
+            </div>
+            <div className="col-12 lg:col-6">
+              <Title as="h2">Join Our Weekly Digest</Title>
+              <p className="mb-10 mt-3 text-2xl">
+                Get Exclusive Promotions & Updates Straight To Your Inbox.
+              </p>
+              <div className="flex justify-between overflow-hidden rounded-2xl bg-white">
+                <input
+                  placeholder="Enter your email here"
+                  className="rounded-2xl border-none p-5 ring-0 focus:outline-none"
+                />
+                <a href="">
+                  <div className="flex w-full items-center rounded-2xl bg-[#A259FF] px-13 py-5">
+                    <div>
+                      <AiOutlineMail size={20} className={`mr-3 text-white`} />
+                    </div>
+                    <p className="w-fit font-bold">Subscribe</p>
+                  </div>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>

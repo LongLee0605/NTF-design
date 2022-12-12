@@ -1,11 +1,12 @@
 .title {
-  @apply text-[30px] font-bold leading-10 lg:text-[36px] lg:leading-[48px];
+  @apply text-[67px] font-bold leading-[74px] text-white;
 }
 .h1 {
-  @apply text-[36px] leading-[48px] lg:text-5xl  lg:leading-[68px];
+  @apply mr-28 text-[67px] font-bold leading-[74px] text-white;
 }
+
 .h2 {
-  @apply text-[30px] leading-10 lg:text-4xl lg:leading-[48px];
+  @apply text-[38px] font-bold leading-[46px] text-white;
 }
 .h3 {
   @apply text-xl lg:text-2xl;
