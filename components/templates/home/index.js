@@ -12,16 +12,20 @@ const HomeTemplate = ({ dataStatic }) => {
   return (
     <>
       {/* Banner */}
-      <section className="mt-[100px]">
-        <div className="container">
+      <section className="mt-8 lg:mt-[100px]">
+        <div className="container pt-10 lg:pt-0">
           <div className="row items-center">
             <div className="col-12 lg:col-6">
-              <Title as="h1">Discover Digital Art & Collect NFTs</Title>
-              <p className="mt-5 pr-16 text-2xl ">
+              <Title
+                className={`mr-0 text-[34px] font-bold leading-9 text-white lg:mr-28 lg:text-[67px] lg:leading-[74px]`}
+              >
+                Discover Digital Art & Collect NFTs
+              </Title>
+              <p className="mt-5 pr-0 text-lg lg:pr-16 lg:text-2xl">
                 NFT Marketplace UI Created With Anima For Figma. Collect, Buy
                 And Sell Art From More Than 20k NFT Artists.
               </p>
-              <div className="mt-10 grid grid-cols-3">
+              <div className="mt-10 grid grid-cols-1 lg:grid-cols-3">
                 <a href="">
                   <div className="flex items-center justify-center rounded-2xl bg-[#A259FF] p-6">
                     <div className="mr-2">
@@ -32,7 +36,7 @@ const HomeTemplate = ({ dataStatic }) => {
                 </a>
               </div>
               <div className="mt-10 h-[74px]">
-                <div className="grid grid-cols-3">
+                <div className="grid grid-cols-3 text-center lg:text-left">
                   <div>
                     <div className={`text-3xl text-white`}>
                       <CountUp end={240} className={` font-bold`} />
@@ -57,7 +61,7 @@ const HomeTemplate = ({ dataStatic }) => {
                 </div>
               </div>
             </div>
-            <div className="col-12 lg:col-6">
+            <div className="col-12 pt-8 lg:col-6 lg:pt-0">
               <div className="overflow-hidden rounded-2xl">
                 <Image
                   src="/assets/images/banner.gif"
@@ -75,43 +79,33 @@ const HomeTemplate = ({ dataStatic }) => {
         {" "}
         <div className="container">
           <Title as="h2">Trending Collection</Title>
-          <p className="mt-3 text-2xl">
+          <p className="mt-3 text-lg lg:text-2xl">
             Checkout our weekly updated trending collection.
           </p>
           <div className="my-[60px]">
-            <div className="grid grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 justify-items-center gap-8 lg:grid-cols-3 lg:justify-start">
               {dataStatic?.images?.map((item, index) => {
                 return (
-                  <div key={index}>
-                    <div
-                      className="rounded-2xl"
-                      style={{
-                        width: "348px",
-                        height: "330px",
-                        position: "relative",
-                        alignSelf: "center",
-                      }}
-                    >
-                      <Image src={item.src} alt="Logo skill" layout="fill" />
-                    </div>
-                    <div className="mt-4 grid grid-cols-3 gap-4">
+                  <div
+                    key={index}
+                    className="flex max-w-[348px] flex-col justify-center"
+                  >
+                    <Image
+                      src={item.src}
+                      alt="Logo skill"
+                      width={348}
+                      height={220}
+                    />
+                    <div className="mt-4 grid grid-cols-3 justify-items-center gap-4">
                       {item?.mini?.map((itemMini, indexMini) => {
                         return (
-                          <div
-                            key={indexMini}
-                            className="rounded-2xl"
-                            style={{
-                              width: "103px",
-                              height: "100px",
-                              position: "relative",
-                              alignSelf: "center",
-                            }}
-                          >
+                          <div key={indexMini} className="rounded-2xl">
                             {" "}
                             <Image
                               src={itemMini.src}
                               alt="Logo skill"
-                              layout="fill"
+                              width={348}
+                              height={220}
                             />
                           </div>
                         );
@@ -154,13 +148,13 @@ const HomeTemplate = ({ dataStatic }) => {
       <section>
         <div className="container">
           <div className="row">
-            <div className="col-9">
+            <div className="col-12 lg:col-8">
               <Title as="h2">Top Creators</Title>
-              <p className="mt-3 text-2xl">
+              <p className="mt-3 text-lg lg:text-2xl">
                 Checkout Top Rated Creators on the NFT Marketplace
               </p>
             </div>
-            <div className="col-3 flex items-end">
+            <div className="col-12 mt-6 flex items-end justify-center lg:mt-0 lg:col-4 lg:justify-end">
               <a href="" className="">
                 <div className="rounded-3xl border border-[#A259FF]">
                   <div className="flex px-[50px] py-5">
@@ -173,14 +167,14 @@ const HomeTemplate = ({ dataStatic }) => {
               </a>
             </div>
           </div>
-          <div className="mt-[60px] grid grid-cols-4 gap-8">
+          <div className="mx-auto mt-8 grid max-w-md grid-cols-1 gap-8 lg:mt-[60px] lg:max-w-none lg:grid-cols-4">
             {dataStatic?.Tops?.map((item, index) => {
               return (
                 <div
                   key={index}
-                  className="relative flex flex-col items-center rounded-3xl bg-[#3B3B3B] p-5"
+                  className="relative flex flex-row items-center rounded-3xl bg-[#3B3B3B] p-5 lg:flex-col"
                 >
-                  <div className="absolute left-5 top-4 rounded-full bg-[#2B2B2B] px-3 py-1 text-[#858584]">
+                  <div className="absolute left-5 top-4 z-10 rounded-full bg-[#2B2B2B] px-3 py-1 text-[#858584]">
                     {item.num}
                   </div>
                   <div
@@ -194,14 +188,16 @@ const HomeTemplate = ({ dataStatic }) => {
                   >
                     <Image src={item.src} alt="Logo skill" layout="fill" />
                   </div>
-                  <div>
-                    <p className="text-2xl font-bold">{item.name}</p>
-                  </div>
-                  <div>
-                    <p className="text-[#858584]">
-                      Total Sales:{" "}
-                      <span className="text-white">{item.total}</span>
-                    </p>
+                  <div className="ml-5 text-left lg:ml-0 lg:text-center">
+                    <div>
+                      <p className="text-2xl font-bold">{item.name}</p>
+                    </div>
+                    <div>
+                      <p className="text-[#858584]">
+                        Total Sales:{" "}
+                        <span className="text-white">{item.total}</span>
+                      </p>
+                    </div>
                   </div>
                 </div>
               );
@@ -213,31 +209,48 @@ const HomeTemplate = ({ dataStatic }) => {
       <section>
         <div className="container">
           <Title as="h2">Browse Categories</Title>
-          <div className="mt-[60px] grid grid-cols-4 gap-8">
+          <div className="mx-auto mt-[60px] grid max-w-[320px] grid-cols-2 justify-items-center gap-4 lg:max-w-none lg:grid-cols-4 lg:gap-8">
             {dataStatic?.Browser?.map((item, index) => {
               return (
-                <div key={index} className="group overflow-hidden rounded-2xl">
+                <div
+                  key={index}
+                  className="group max-w-[145px] overflow-hidden rounded-2xl lg:max-w-none"
+                >
                   {/* hover */}
-                  <div className="group relative">
+                  <div className="group relative max-w-[145px] lg:max-w-none">
                     <Image
                       src={item.src}
                       alt="Logo skill"
                       width={253}
                       height={240}
-                      className="blur-sm duration-500 group-hover:blur-0"
+                      className="hidden blur-sm duration-500 group-hover:blur-0 lg:block"
+                    />
+                    <Image
+                      src={item.src}
+                      alt="Logo skill"
+                      width={145}
+                      height={145}
+                      className="block blur-sm duration-500 group-hover:blur-0 lg:hidden"
                     />
                     <div className="absolute inset-0 duration-500 group-hover:opacity-0">
                       <Image
-                        className="mx-auto pt-20"
+                        className="mx-auto hidden pt-20 lg:block"
                         src={item.srcH}
                         alt="Logo skill"
                         width={100}
                         height={100}
                       />
+                      <Image
+                        className="mx-auto block pt-14 lg:hidden"
+                        src={item.srcH}
+                        alt="Logo skill"
+                        width={50}
+                        height={50}
+                      />
                     </div>
                   </div>
-                  <div className="bg-[#3B3B3B] px-8 py-5">
-                    <p className="text-2xl font-bold">{item.text}</p>
+                  <div className="bg-[#3B3B3B] px-2 py-4 lg:px-8 lg:py-5">
+                    <p className="text-lg font-bold lg:text-2xl">{item.text}</p>
                   </div>
                 </div>
               );
@@ -249,11 +262,13 @@ const HomeTemplate = ({ dataStatic }) => {
       <section>
         <div className="container">
           <div className="row">
-            <div className="col-9">
+            <div className="col-12 lg:col-8">
               <Title as="h2">Discover More NFTs</Title>
-              <p className="mt-3 text-2xl">Explore new trending NFTs</p>
+              <p className="mt-3 text-lg lg:text-2xl">
+                Explore new trending NFTs
+              </p>
             </div>
-            <div className="col-3 flex items-end">
+            <div className="col-12 mt-8 flex items-end justify-center lg:mt-0 lg:col-4">
               <a href="" className="">
                 <div className="rounded-3xl border border-[#A259FF]">
                   <div className="flex items-center px-[50px] py-5">
@@ -266,10 +281,13 @@ const HomeTemplate = ({ dataStatic }) => {
               </a>
             </div>
           </div>
-          <div className="mt-15 grid grid-cols-3 gap-8">
+          <div className="mt-15 grid grid-cols-1 justify-items-center gap-4 lg:grid-cols-3 lg:gap-8">
             {dataStatic?.More?.map((item, index) => {
               return (
-                <div key={index} className="group overflow-hidden rounded-2xl">
+                <div
+                  key={index}
+                  className="group max-w-[349px] overflow-hidden rounded-2xl lg:max-w-none"
+                >
                   {/* hover */}
                   <div className="group">
                     <Image
@@ -297,12 +315,20 @@ const HomeTemplate = ({ dataStatic }) => {
                     </div>
                     <div className="row">
                       <div className="col-6">
-                        <p className="text-xs text-[#858584]">Price</p>
-                        <div className="text-white">{item.price}</div>
+                        <p className="whitespace-nowrap text-xs text-[#858584]">
+                          Price
+                        </p>
+                        <div className="whitespace-nowrap text-white">
+                          {item.price}
+                        </div>
                       </div>
                       <div className="col-6 text-right">
-                        <p className="text-xs text-[#858584]">Highest Bid</p>
-                        <div className="text-white">{item.bid}</div>
+                        <p className="whitespace-nowrap text-xs text-[#858584]">
+                          Highest Bid
+                        </p>
+                        <div className="whitespace-nowrap text-white">
+                          {item.bid}
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -314,10 +340,10 @@ const HomeTemplate = ({ dataStatic }) => {
       </section>
       {/* section 5 */}
       <section className="relative py-0">
-        <div className=" h-[675px] bg-[url('/assets/images/banner-full.png')] bg-cover bg-center">
+        <div className=" h-[850px] bg-[url('/assets/images/banner-full.png')] bg-cover bg-center lg:h-[675px]">
           <div class="absolute inset-0 bg-bbc-gradient "></div>
         </div>
-        <div className="container absolute inset-0 pt-[360px] pb-15">
+        <div className="container absolute inset-0 max-w-[320px] pt-[360px] pb-15 lg:max-w-none">
           <div className=" mb-8 flex w-[160px] items-center rounded-2xl bg-[#3B3B3B] px-5 py-3">
             <div className="mr-3">
               <Image
@@ -331,8 +357,8 @@ const HomeTemplate = ({ dataStatic }) => {
             <p></p>
           </div>
           <div className="row">
-            <div className="col-6">
-              <Title as="h2">Discover More NFTs</Title>
+            <div className="col-12 lg:col-6">
+              <Title as="h2">Magic Mashrooms</Title>
               <a href="">
                 <div className="mt-8 w-[200px] rounded-3xl bg-white">
                   <div className="flex items-center px-[50px] py-5">
@@ -344,7 +370,7 @@ const HomeTemplate = ({ dataStatic }) => {
                 </div>
               </a>
             </div>
-            <div className="col-6 flex justify-end">
+            <div className="col-12 mt-6 flex justify-center lg:mt-0 lg:col-6 lg:justify-end">
               <div className="w-[300px] rounded-xl bg-[#3B3B3B] bg-opacity-50 p-8">
                 <p>Auction ends in:</p>
                 <div className="flex  justify-between text-white">
@@ -372,13 +398,15 @@ const HomeTemplate = ({ dataStatic }) => {
       <section>
         <div className="container">
           <Title as="h2">How it works</Title>
-          <p className="mt-3 text-2xl">Find out how to get started</p>
-          <div className="mt-12 grid grid-cols-3 gap-8">
+          <p className="mt-3 text-lg lg:text-2xl">
+            Find out how to get started
+          </p>
+          <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-3">
             {dataStatic?.How?.map((item, index) => {
               return (
                 <div
                   key={index}
-                  className="item-center flex flex-col overflow-hidden rounded-2xl bg-[#3B3B3B] p-8"
+                  className="item-center flex overflow-hidden rounded-2xl bg-[#3B3B3B] p-5 lg:flex-col lg:p-8"
                 >
                   <div className="mb-5 flex justify-center">
                     <Image
@@ -388,9 +416,11 @@ const HomeTemplate = ({ dataStatic }) => {
                       height={220}
                     />
                   </div>
-                  <div className="text-center">
-                    <p className="mb-3 text-2xl font-bold">{item.title}</p>
-                    <p className="px-5">{item.text}</p>
+                  <div className="ml-4 text-left lg:ml-0 lg:text-center">
+                    <p className="mb-3 text-base font-bold lg:text-2xl">
+                      {item.title}
+                    </p>
+                    <p className="text-xs lg:px-5 lg:text-base">{item.text}</p>
                   </div>
                 </div>
               );
@@ -403,7 +433,7 @@ const HomeTemplate = ({ dataStatic }) => {
         <div className="container rounded-2xl bg-[#3B3B3B] p-15">
           <div className="row items-center">
             <div className="col-12 lg:col-6">
-              <div className="">
+              <div className=" mb-6 flex justify-center lg:mb-0">
                 <Image
                   src={`/assets/images/Photo.png`}
                   alt="Logo skill"
@@ -414,20 +444,20 @@ const HomeTemplate = ({ dataStatic }) => {
             </div>
             <div className="col-12 lg:col-6">
               <Title as="h2">Join Our Weekly Digest</Title>
-              <p className="mb-10 mt-3 text-2xl">
+              <p className="mb-10 mt-3 text-lg lg:text-2xl">
                 Get Exclusive Promotions & Updates Straight To Your Inbox.
               </p>
-              <div className="flex justify-between overflow-hidden rounded-2xl bg-white">
+              <div className="block justify-between overflow-hidden rounded-2xl lg:flex lg:bg-white">
                 <input
                   placeholder="Enter your email here"
-                  className="rounded-2xl border-none p-5 ring-0 focus:outline-none"
+                  className="mb-6 w-full rounded-2xl border-none p-5 ring-0 focus:outline-none lg:mb-0"
                 />
                 <a href="">
-                  <div className="flex w-full items-center rounded-2xl bg-[#A259FF] px-13 py-5">
+                  <div className="flex w-full items-center justify-center rounded-2xl bg-[#A259FF] px-13 py-5">
                     <div>
                       <AiOutlineMail size={20} className={`mr-3 text-white`} />
                     </div>
-                    <p className="w-fit font-bold">Subscribe</p>
+                    <p className="w-fitfont-bold">Subscribe</p>
                   </div>
                 </a>
               </div>

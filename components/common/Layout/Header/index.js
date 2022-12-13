@@ -106,9 +106,9 @@ const Header = () => {
         </div>
       ) : (
         <div
-          className={`fixed top-0 z-50 w-full bg-[#2B2B2B]`}
+          className={`fixed top-0 z-50 w-full bg-[#2B2B2B] px-5`}
           style={{
-            boxShadow: "rgb(181 181 181 / 0.75) 0 16px 40px",
+            boxShadow: "rgb(181 181 181 / 0.75) 0 2px 4px",
             backdropFilter: "blur(10px)",
           }}
         >

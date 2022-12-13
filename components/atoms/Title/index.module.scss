@@ -2,11 +2,11 @@
   @apply text-[67px] font-bold leading-[74px] text-white;
 }
 .h1 {
-  @apply mr-28 text-[67px] font-bold leading-[74px] text-white;
+  @apply mr-28 text-[34px] font-bold leading-9 text-white lg:text-[67px] lg:leading-[74px];
 }
 
 .h2 {
-  @apply text-[38px] font-bold leading-[46px] text-white;
+  @apply text-[34px] font-bold leading-[46px] text-white lg:text-[38px];
 }
 .h3 {
   @apply text-xl lg:text-2xl;
